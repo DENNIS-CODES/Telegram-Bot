@@ -3,12 +3,10 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const msgSchema = new Schema({
-    msgSchema: {
-        type:String,
-        required:true
-    }
+    token: { type:String, required:true },
+    
 })
 
-const msgModel = mongoose.model('msg',msgSchema);
+const msgModel = mongoose.model('msg',msgSchema, "msg");
 
 module.exports = { msgModel };
